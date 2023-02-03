@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouteObject } from 'react-router-dom';
 import DicePoker from './pages/dicepoker/index';
 import Games from './pages/games';
+import Socket from './pages/socket';
 import Root from './Root';
 
 export const routes: RouteObject[] = [
@@ -15,6 +16,10 @@ export const routes: RouteObject[] = [
       {
         path: 'dicepoker',
         element: <DicePoker />,
+      },
+      {
+        path: 'socket',
+        element: <Socket />,
       },
     ],
   },
