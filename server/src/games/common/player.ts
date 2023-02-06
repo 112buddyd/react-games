@@ -11,7 +11,7 @@ import { Purse } from './purse';
 export default class Player {
   public readonly id: string;
   public name: string;
-  private purse: Purse;
+  public purse: Purse;
 
   constructor(id: string, name: string) {
     this.id = id;

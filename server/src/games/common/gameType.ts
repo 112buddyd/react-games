@@ -1,5 +1,7 @@
-export enum GameType {
-  DICEHOLDEM = 'diceholdem',
-}
+import DiceHoldEm from '../diceholdem/index';
+
+export const GameType = {
+  DICEHOLDEM: DiceHoldEm,
+};
 
 export default GameType;

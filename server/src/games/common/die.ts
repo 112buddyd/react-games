@@ -12,9 +12,11 @@ export class Die {
     const result = Math.floor(Math.random() * this.faceCount);
     if (this.faces) {
       this.value = this.faces[result];
+      console.log('faces value', this.value);
       return this.value;
     }
     this.value = result + 1;
+    console.log('value', this.value);
     return this.value;
   };
 }
