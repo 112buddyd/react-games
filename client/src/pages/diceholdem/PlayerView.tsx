@@ -7,16 +7,21 @@ import DiceViewer from './DiceViewer';
 
 interface PlayerViewProps {
   player: Player;
+  dice?: string[]| number[];
 }
 
-function PlayerView({ player }: PlayerViewProps) {
+function PlayerView({ player, dice }: PlayerViewProps) {
   return (
     <Container header={<Header variant="h3">{player.name}</Header>}>
       <SpaceBetween size="xs">
-        <Box>Your dice: </Box>
-        <DiceViewer dice={player.dice} />
-        <Box>Your purse: {player.purse}</Box>
-        <Box>Your current bet: {player.currentBet}</Box>
+        {dice && (
+          <>
+            <Box>Dice: </Box>
+            <DiceViewer dice={dice} />
+          </>
+          )}
+        <Box>{`Purse: ${player.purse}`}</Box>
+        {/* <Box>{`Your current bet: ${player.currentBet}`}</Box> */}
       </SpaceBetween>
     </Container>
   );

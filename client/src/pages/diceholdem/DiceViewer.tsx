@@ -2,13 +2,13 @@ import Badge from '@cloudscape-design/components/badge';
 import SpaceBetween from '@cloudscape-design/components/space-between';
 
 interface DiceViewerProps {
-  dice: number[];
+  dice?: number[]|string[];
 }
 
 function DiceViewer({ dice }: DiceViewerProps) {
   return (
     <SpaceBetween size="xs" direction="horizontal">
-      {dice.map((d, i) => (
+      {dice && dice.map((d, i) => (
         <Badge key={i} color="blue">
           <h1>{d}</h1>
         </Badge>

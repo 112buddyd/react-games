@@ -8,7 +8,7 @@ function SideNav() {
       activeHref={window.location.pathname}
       header={{ text: 'React Games', href: '/' }}
       items={[
-        { text: 'Games', href: '/games', type: 'link' },
+        { text: 'Lobbies', href: '/lobbies', type: 'link' },
         { text: 'Dice Poker', href: '/dicepoker', type: 'link' },
       ]}
       onFollow={(event) => {
